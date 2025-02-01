@@ -73,10 +73,10 @@ jobs:
             os: ubuntu-latest
           - runtime: win-x64
             package_tests: true
-            os: windows-latest
+            os: ubuntu-latest
           - runtime: win-x86
             package_tests: false
-            os: windows-latest
+            os: ubuntu-latest
 
     runs-on: ${{ matrix.os }}
     steps:
