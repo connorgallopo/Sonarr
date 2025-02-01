@@ -5,6 +5,7 @@ on:
     branches:
       - v5-develop
       - v5-main
+      - v5-build
     paths-ignore:
       - "src/Sonarr.Api.*/openapi.json"
   pull_request:
