@@ -203,7 +203,7 @@ jobs:
           binary_path: ${{ matrix.binary_path }}
 
   deploy:
-    if: ${{ github.ref_name == 'v5-develop' || github.ref_name == 'v5-main' }}
+    if: ${{ github.ref_name == 'v5-develop' || github.ref_name == 'v5-main' || github.ref_name == 'v5-build' }}
     needs:
       [
         prepare,
@@ -233,7 +233,7 @@ jobs:
         integration_test,
         deploy,
       ]
-    if: ${{ !cancelled() && (github.ref_name == 'v5-develop' || github.ref_name == 'v5-main') }}
+    if: ${{ !cancelled() && (github.ref_name == 'v5-develop' || github.ref_name == 'v5-main' || github.ref_name == 'v5-build') }}
     env:
       STATUS: ${{ contains(needs.*.result, 'failure') && 'failure' || 'success' }}
     runs-on: ubuntu-latest
