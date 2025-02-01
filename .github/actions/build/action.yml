@@ -128,7 +128,7 @@ runs:
             cp -r _output/$framework/$runtime/publish/* $folder
             cp -r _output/Sonarr.Update/$framework/$runtime/publish $folder/Sonarr.Update
             cp LICENSE.md $folder
-            # cp -r _output/$framework/$runtime/publish/* $folder
+            cp -r _output/$framework-windows/$runtime/publish/* $folder
 
             echo "Removing Sonarr.Mono"
             rm -f $folder/Sonarr.Mono.*
